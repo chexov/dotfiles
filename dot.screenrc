@@ -1,0 +1,49 @@
+#
+# Screen resoure file by chexov@rtf-15
+#
+#
+
+### Caption set
+#caption always "%{yK}|%{yK}%c|  %{yK}%-Lw%{yK}%50>%{Ky}%n%f* %t%{-}%+Lw%<%{- Wk}"
+
+#caption always "%d.%m.%y %0c%{=b kW} %l %{=r kd}%-Lw%{= bd}%50>%n%f* %t%{-}%+Lw%<%{- Wk}"
+
+
+###Basic staff set
+startup_message off             # don't want this either.
+bell_msg '-=[ b00m in %n ]=-'
+defmonitor on                   # turn monitoring on
+activity "activity on %n"                    # tell me when stuff happens!
+crlf off                        # no thanks.
+defscrollback 3000              # please sir, can i have some more?
+#autodetach on                   # deattach on hangUp
+pow_detach_msg "Screen session of $LOGNAME" # \$:cr:\$:nl:terminated...\n[NO CARRIER]"c  # Emulate logout message
+
+defutf8 on
+#utf8 on on
+
+###Binding staff
+#bindkey -k kh select 0 # Home = screen 0
+#bindkey -k F2 next     # F12 = next
+#bindkey -k F2 next     # F12 = next
+
+#bind c screen -t '.' tcsh
+
+termcap xterm*  LP:hs@
+
+termcap vt*  LP
+termcap vt102|vt220  Z0=\E[?3h:Z1=\E[?3l
+termcap vt100  ""  l0=PF1:l1=PF2:l2=PF3:l3=PF4
+termcap h19|z19  am@:im=\E@:ei=\EO  dc=\E[P
+
+#termcapinfo xterm "ve=\E[?25h\E[?17;0;64c"
+#termcapinfo linux "ve=\E[?25h\E[?17;0;64c"
+#escape \034\034
+
+#caption always "%{wb}%n%f %t %{wk} %?%-Lw%?%{wb}[%n*%f %t]%?(%u)%?%{wk}%?%+Lw%? %{wk}"
+caption always "%l %{wk} %?%-Lw%?%{wb}[%n*%f %t]%?(%u)%?%{wk}%?%+Lw%? %{wk}"
+#caption always "%{=b kW}%l %{=r kd}%-Lw%{= bd}%50>%n%f* %t%{-}%+Lw%<%{- Wk}"
+#hardstatus alwayslastline "%{+b kr}host: %{kw}%H%{kg} %c - %D %d.%m.%Y %{kr}load: %l %-26=%1`"
+
+#encoding KOI8-R
+#
